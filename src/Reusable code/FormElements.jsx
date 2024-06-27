@@ -12,6 +12,7 @@ const FormElements = ({
   inputs,
   className,
   error,
+  placeholder,
 }) => {
   switch (type) {
     case "text":
@@ -31,6 +32,7 @@ const FormElements = ({
             value={value}
             className={className}
             name={name}
+            placeholder={placeholder}
           />
         </>
       );

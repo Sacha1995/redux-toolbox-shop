@@ -3,19 +3,19 @@ import { changeContentShoppingCart } from "../Redux-toolbox/shopSlice";
 import Button from "../Reusable code/Button";
 import Quantity from "./Quantity";
 
-const Controls = ({ inCard, id }) => {
+const Controls = ({ inCart, id }) => {
   const dispatch = useDispatch();
 
   return (
     <div className="controlsProduct">
       <Button
-        className={`btn ${inCard ? "delete" : "add"}`}
-        text={inCard ? "Remove from card" : "Add to card"}
+        className={inCart ? "btn deleteBtn" : "btn addBtn"}
+        text={inCart ? "Remove from cart" : "Add to cart"}
         onClick={() => {
           dispatch(changeContentShoppingCart(id));
         }}
       />
-      {inCard && <Quantity id={id} />}
+      {inCart && <Quantity id={id} />}
     </div>
   );
 };

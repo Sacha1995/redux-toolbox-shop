@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import formEvent from "../Redux-toolbox/shopSlice";
+import { formEvent } from "../Redux-toolbox/shopSlice";
 import FormElements from "../Reusable code/FormElements";
 
 const Search = () => {
@@ -11,9 +11,9 @@ const Search = () => {
         type="text"
         id="searchStr"
         callback={(e) => {
-          dispatch(formEvent(e));
+          dispatch(formEvent({ id: e.target.id, value: e.target.value }));
         }}
-        placeholder="Search movie"
+        placeholder="Search products"
       />
     </div>
   );

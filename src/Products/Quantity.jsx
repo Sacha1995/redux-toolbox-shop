@@ -13,23 +13,23 @@ const Quantity = ({ id }) => {
 
   return (
     <div className="quantity">
-      <p
+      <img
+        src="./delete.svg"
+        alt="minus button"
+        className="minus controlsQuantity"
         onClick={() => {
           dispatch(decrement(id));
         }}
-      >
-        {" "}
-        -{" "}
-      </p>
+      />
       <p>{quantity}</p>
-      <p
+      <img
+        src="./add.svg"
+        alt="add button"
+        className="plus controlsQuantity"
         onClick={() => {
           dispatch(increment(id));
         }}
-      >
-        {" "}
-        +{" "}
-      </p>
+      />
     </div>
   );
 };

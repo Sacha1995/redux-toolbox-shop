@@ -1,6 +1,6 @@
 const Description = () => {
   return (
-    <div className="shoppingCardItem description">
+    <div className="shoppingCartItem description">
       <p>Item:</p>
       <p className="descriptionPrice">Price:</p>
     </div>

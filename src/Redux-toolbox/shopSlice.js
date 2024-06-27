@@ -14,20 +14,19 @@ export const shopSlice = createSlice({
       state.products[indexOf].viewDescription =
         !state.products[indexOf].viewDescription;
     },
-    formEvent: (state, payload) => {
-      state[payload.e.target.id] = payload.e.target.value;
+    formEvent: (state, { payload }) => {
+      state[payload.id] = payload.value;
     },
     changeContentShoppingCart: (state, { payload }) => {
-      console.log(state);
       const indexOf = getIndex(state.products, payload);
       state.products[indexOf].inCart = !state.products[indexOf].inCart;
       if (state.products[indexOf].inCart) {
         state.products[indexOf].quantity = 1;
       }
-      setLocalStorage("data", state);
+      setLocalStorage("data", state.products);
     },
     viewShoppingCart: (state) => {
-      state.products.viewShoppingCard = !state.products.viewShoppingCard;
+      state.viewShoppingCart = !state.viewShoppingCart;
     },
     decrement: (state, { payload }) => {
       const indexProduct = getIndex(state.products, payload);
@@ -38,7 +37,7 @@ export const shopSlice = createSlice({
           state.products[indexProduct].inCart = false;
         }
       }
-      setLocalStorage("data", state);
+      setLocalStorage("data", state.products);
     },
     increment: (state, { payload }) => {
       const indexProduct = getIndex(state.products, payload);
@@ -46,7 +45,7 @@ export const shopSlice = createSlice({
         state.products[indexProduct].quantity =
           state.products[indexProduct].quantity + 1;
       }
-      setLocalStorage("data", state);
+      setLocalStorage("data", state.products);
     },
   },
 });
@@ -58,12 +57,14 @@ export const {
   changeContentShoppingCart,
   viewShoppingCart,
   decrement,
+  setStoredData,
   increment,
 } = shopSlice.actions;
 
-export const selectProducts = (state) => state.shop.products.products;
+export const selectProducts = (state) => state.shop.products;
 export const selectSearchStr = (state) => state.shop.searchStr;
 export const selectSelect = (state) => state.shop.select;
-export const selectViewShoppingCart = (state) => state.shop.viewShoppingCart;
+export const selectViewShoppingCartStatus = (state) =>
+  state.shop.viewShoppingCart;
 
 export default shopSlice.reducer;

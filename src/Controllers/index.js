@@ -22,7 +22,7 @@ export function getLocalStorage(key) {
 export function calculateTotal(shoppingContent) {
   const _shoppingContent = [...shoppingContent];
   const priceArr = _shoppingContent.map((item) => {
-    return item.price * 100;
+    return item.price * item.quantity * 100;
   });
   const totalPrice = priceArr.reduce((acc, value) => {
     return acc + value;
@@ -48,7 +48,7 @@ export function getIndex(data, id) {
 }
 
 export function getShoppingCart(products) {
-  products.filter((product) => {
-    return product.inCard;
+  return products.filter((product) => {
+    return product.inCart;
   });
 }

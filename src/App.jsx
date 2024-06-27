@@ -12,7 +12,6 @@ const App = () => {
 
   const getApiData = async () => {
     const { data } = await axios.get(`https://fakestoreapi.com/products`);
-    console.log(data);
     dispatch(setProducts(data));
   };
 
@@ -20,6 +19,7 @@ const App = () => {
     const storedData = getLocalStorage("data");
     if (storedData) {
       dispatch(setProducts(storedData));
+      console.log(storedData);
     } else {
       getApiData();
     }

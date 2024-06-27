@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getShoppingCart } from "../Controllers";
+import Quantity from "../Products/Quantity";
 import {
   changeContentShoppingCart,
-  decrement,
-  increment,
   selectProducts,
 } from "../Redux-toolbox/shopSlice";
 import Description from "./Description";
@@ -15,8 +14,8 @@ const ShoppingCartContent = () => {
 
   let shoppingCart = getShoppingCart(products);
 
-  if (!shoppingCart) {
-    return <p>Your shopping card is empty.</p>;
+  if (shoppingCart.length === 0) {
+    return <p className="emptyMessage">Your shopping card is empty.</p>;
   }
 
   return (
@@ -26,25 +25,9 @@ const ShoppingCartContent = () => {
         const { id, title, quantity, price } = product;
         return (
           <div key={id} className="shoppingCartItem">
-            <p
-              onClick={() => {
-                dispatch(decrement(id));
-              }}
-            >
-              {" "}
-              -{" "}
-            </p>
-            <p>{quantity}</p>
-            <p
-              onClick={() => {
-                dispatch(increment(id));
-              }}
-            >
-              {" "}
-              +{" "}
-            </p>
+            <Quantity id={id} />
             <p className="shoppingCartItemTitle">{title}</p>
-            <p>£{Number(price).toFixed(2)}</p>
+            <p>{quantity > 1 ? `£${Number(price).toFixed(2)}` : ""}</p>
             <p>£{Number(price * quantity).toFixed(2)}</p>
             <img
               src="./bin.svg"

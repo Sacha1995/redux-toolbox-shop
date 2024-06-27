@@ -3,27 +3,31 @@ import { useDispatch, useSelector } from "react-redux";
 import { getShoppingCart } from "../Controllers";
 import {
   selectProducts,
-  selectViewShoppingCart,
+  selectViewShoppingCartStatus,
+  viewShoppingCart,
 } from "../Redux-toolbox/shopSlice";
 import ShoppingCartContent from "../ShoppingCartContent/ShoppingCartContent";
 
 const ShoppingCart = () => {
   const dispatch = useDispatch();
   const products = useSelector(selectProducts);
-  const viewShoppingCart = useSelector(selectViewShoppingCart);
+  const viewShoppingCartStatus = useSelector(selectViewShoppingCartStatus);
 
+  if (!products) {
+    return;
+  }
   let shoppingCart = getShoppingCart(products);
 
   return (
     <div
       className="shoppingCartContainer"
       onClick={() => {
-        dispatch(viewShoppingCart);
+        dispatch(viewShoppingCart());
       }}
     >
       <p>{shoppingCart ? shoppingCart.length : 0}</p>
       <img src="./shopping.svg" alt="shopping cart" className="shoppingCart" />
-      {viewShoppingCart && <ShoppingCartContent />}
+      {viewShoppingCartStatus && <ShoppingCartContent />}
     </div>
   );
 };

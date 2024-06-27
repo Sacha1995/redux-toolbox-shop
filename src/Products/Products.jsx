@@ -14,7 +14,6 @@ const Products = () => {
   const searchStr = useSelector(selectSearchStr);
   const select = useSelector(selectSelect);
   const dispatch = useDispatch();
-  console.log(products);
 
   const filtered = useMemo(() => {
     if (!products) {
@@ -27,7 +26,7 @@ const Products = () => {
     return <p>Loading...</p>;
   }
 
-  if (filtered.length === 0) {
+  if (searchStr !== "" && filtered.length === 0) {
     return <p>No matches</p>;
   }
 
@@ -45,8 +44,12 @@ const Products = () => {
         } = product;
         return (
           <div className="productCard" key={id}>
-            <h2>{title}</h2>
-            <img src={image} alt={title} />
+            <div className="titleContainer">
+              <h2>{title}</h2>
+            </div>
+            <div className="imgContainer">
+              <img src={image} alt={title} />
+            </div>
             <p>£{Number(price).toFixed(2)}</p>
             <p
               className="description"

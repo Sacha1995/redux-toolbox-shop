@@ -13,7 +13,7 @@ const Sort = () => {
         id="select"
         name="order"
         callback={(e) => {
-          dispatch(formEvent(e));
+          dispatch(formEvent({ id: e.target.id, value: e.target.value }));
         }}
         options={[
           "Original",
