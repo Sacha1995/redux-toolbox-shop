@@ -1,0 +1,151 @@
+/********* Header *********/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.shoppingCart {
+  height: 30px;
+  flex-shrink: 2;
+  margin-right: 10px;
+}
+
+.shoppingCartContainer {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  position: relative;
+}
+
+.shoppingCartContainer:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+.search,
+.dropdown {
+  flex-grow: 1;
+}
+/********* Shopping Card Content *********/
+.shoppingCartContent {
+  position: absolute;
+  background-color: white;
+  width: fit-content;
+  top: 0;
+  right: 2px;
+  border: lightgray 2px solid;
+  padding: 10px;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.shoppingCartItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: black 1px dashed;
+}
+
+.delete {
+  height: 15px;
+  display: block;
+  align-self: center;
+  flex-shrink: 2;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.delete:hover {
+  background-color: red;
+}
+
+.shoppingCartItemTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 300px;
+  text-wrap: nowrap;
+  flex-grow: 2;
+}
+
+.total,
+.description {
+  font-weight: bold;
+}
+
+.descriptionPrice {
+  margin-right: 35px;
+}
+
+/********* Product Card *********/
+.arrow {
+  display: inline-block;
+  font-size: 10px;
+  padding-bottom: 2px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productCard {
+  border: grey 3px solid;
+  margin: 10px;
+  padding: 20px;
+  max-width: 200px;
+}
+
+img {
+  height: 100px;
+  display: block;
+  margin: 0px auto;
+}
+
+.view {
+  display: block;
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+}
+
+.description {
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-5px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.noview {
+  display: none;
+}
+
+.add {
+  background-color: green;
+}
+
+/********* Controls *********/
+.quantity {
+  display: flex;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.controlsProduct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
