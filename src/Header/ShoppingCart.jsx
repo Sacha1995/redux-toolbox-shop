@@ -2,16 +2,12 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getShoppingCart } from "../Controllers";
-import {
-  selectProducts,
-  selectViewShoppingCartStatus,
-  viewShoppingCart,
-} from "../Redux-toolbox/shopSlice";
+import { selectProducts } from "../Redux-toolbox/shopSlice";
 
 const ShoppingCart = () => {
   const dispatch = useDispatch();
   const products = useSelector(selectProducts);
-  const viewShoppingCartStatus = useSelector(selectViewShoppingCartStatus);
+  // const viewShoppingCartStatus = useSelector(selectViewShoppingCartStatus);
 
   if (!products) {
     return;
@@ -21,9 +17,9 @@ const ShoppingCart = () => {
   return (
     <div
       className="shoppingCartContainer"
-      onClick={() => {
-        dispatch(viewShoppingCart());
-      }}
+      // onClick={() => {
+      //   dispatch(viewShoppingCart());
+      // }}
     >
       <p>{shoppingCart ? shoppingCart.length : 0}</p>
       <Link to="./shoppingcart">

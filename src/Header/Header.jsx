@@ -4,11 +4,13 @@ import ShoppingCart from "./ShoppingCart";
 
 const Header = () => {
   return (
-    <div className="header">
-      <Search />
-      <Sort />
-      <ShoppingCart />
-    </div>
+    <header>
+      <div className="header">
+        <Search />
+        <Sort />
+        <ShoppingCart />
+      </div>
+    </header>
   );
 };
 

@@ -10,14 +10,18 @@ h2 {
 }
 
 /********* Header *********/
+header {
+  backdrop-filter: hue-rotate(120deg) blur(1px);
+  position: fixed;
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 5px;
   align-items: center;
   padding: 5px 20px;
-  backdrop-filter: hue-rotate(120deg) blur(1px);
-  position: fixed;
   width: 100%;
   box-sizing: border-box;
 }
@@ -32,11 +36,22 @@ h2 {
   cursor: pointer;
   align-items: center;
   position: relative;
+  order: -1;
+  height: 30px;
 }
 
 .search,
 .dropdown {
   flex-grow: 1;
+}
+
+input {
+  width: 90%;
+}
+
+.dropdown {
+  order: 2;
+  text-align: right;
 }
 
 input,
@@ -55,8 +70,8 @@ option {
 }
 /********* Shopping Card Content *********/
 .shoppingCartContentContainer {
-  padding-top: 80px;
-  min-height: calc(100vh - 80px);
+  padding-top: 110px;
+  min-height: calc(100vh - 110px);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -65,11 +80,12 @@ option {
 .shoppingCartContent {
   background-color: white;
   width: fit-content;
-  border: #76aea3 2px solid;
+  border: #76aea3 3px solid;
   padding: 10px;
   min-width: 300px;
   max-width: 1000px;
   margin: 0px 20px;
+  border-radius: 10px;
 }
 
 .emptyMessage {
@@ -78,6 +94,7 @@ option {
   padding: 20px;
   border: #76aea3 2px solid;
   margin: 0px auto;
+  border-radius: 10px;
 }
 
 .shoppingCartItem {
@@ -145,8 +162,8 @@ option {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 80px;
-  min-height: calc(100vh - 90px);
+  padding-top: 100px;
+  min-height: calc(100vh - 100px);
   width: 100%;
 }
 
@@ -264,4 +281,59 @@ h2 {
 .deleteBtn:hover {
   background-color: #fed1bc4f;
   transition: background-color 0.5s;
+}
+
+/********* Media Query *********/
+@media (min-width: 294px) {
+  .shoppingCartContentContainer {
+    padding-top: 110px;
+    min-height: calc(100vh - 110px);
+  }
+
+  .products {
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
+  }
+
+  .shoppingCartContainer {
+    order: 0;
+    height: auto;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  input {
+    width: 80%;
+  }
+}
+
+@media (min-width: 500px) {
+  .shoppingCartContentContainer {
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .products {
+    padding-top: 80px;
+    min-height: calc(100vh - 90px);
+  }
+
+  .shoppingCartContainer {
+    order: 2;
+  }
+
+  .dropdown {
+    text-align: center;
+  }
+
+  .header {
+    max-width: 850px;
+    margin: 0px auto;
+  }
+
+  header {
+    width: 100%;
+  }
 }

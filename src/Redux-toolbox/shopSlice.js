@@ -25,9 +25,9 @@ export const shopSlice = createSlice({
       }
       setLocalStorage("data", state.products);
     },
-    viewShoppingCart: (state) => {
-      state.viewShoppingCart = !state.viewShoppingCart;
-    },
+    // viewShoppingCart: (state) => {
+    //   state.viewShoppingCart = !state.viewShoppingCart;
+    // },
     decrement: (state, { payload }) => {
       const indexProduct = getIndex(state.products, payload);
       if (indexProduct !== -1) {
@@ -64,7 +64,7 @@ export const {
 export const selectProducts = (state) => state.shop.products;
 export const selectSearchStr = (state) => state.shop.searchStr;
 export const selectSelect = (state) => state.shop.select;
-export const selectViewShoppingCartStatus = (state) =>
-  state.shop.viewShoppingCart;
+// export const selectViewShoppingCartStatus = (state) =>
+//   state.shop.viewShoppingCart;
 
 export default shopSlice.reducer;
