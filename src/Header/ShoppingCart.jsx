@@ -1,12 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { getShoppingCart } from "../Controllers";
 import {
   selectProducts,
   selectViewShoppingCartStatus,
   viewShoppingCart,
 } from "../Redux-toolbox/shopSlice";
-import ShoppingCartContent from "../ShoppingCartContent/ShoppingCartContent";
 
 const ShoppingCart = () => {
   const dispatch = useDispatch();
@@ -26,8 +26,14 @@ const ShoppingCart = () => {
       }}
     >
       <p>{shoppingCart ? shoppingCart.length : 0}</p>
-      <img src="./shopping.svg" alt="shopping cart" className="shoppingCart" />
-      {viewShoppingCartStatus && <ShoppingCartContent />}
+      <Link to="./shoppingcart">
+        <img
+          src="./shopping.svg"
+          alt="shopping cart"
+          className="shoppingCart"
+        />
+      </Link>
+      {/* {viewShoppingCartStatus && <ShoppingCartContent />} */}
     </div>
   );
 };

@@ -2,7 +2,6 @@
 
 #root {
   background-image: url("../public/background.png");
-  margin: -10px;
   background-attachment: fixed;
 }
 
@@ -16,16 +15,16 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 20px;
   backdrop-filter: hue-rotate(120deg) blur(1px);
   position: fixed;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .shoppingCart {
   height: 30px;
   flex-shrink: 2;
-  margin-right: 30px;
 }
 
 .shoppingCartContainer {
@@ -55,26 +54,30 @@ option {
   padding: 5px;
 }
 /********* Shopping Card Content *********/
+.shoppingCartContentContainer {
+  padding-top: 80px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .shoppingCartContent {
-  position: absolute;
   background-color: white;
   width: fit-content;
-  top: 48px;
-  right: 28px;
   border: #76aea3 2px solid;
   padding: 10px;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 1000px;
+  margin: 0px 20px;
 }
 
 .emptyMessage {
-  position: absolute;
-  top: 38px;
-  right: 28px;
   background-color: white;
   width: 200px;
   padding: 20px;
   border: #76aea3 2px solid;
+  margin: 0px auto;
 }
 
 .shoppingCartItem {
@@ -100,7 +103,6 @@ option {
 .shoppingCartItemTitle {
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 300px;
   text-wrap: nowrap;
   flex-grow: 2;
 }
@@ -144,6 +146,8 @@ option {
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 80px;
+  min-height: calc(100vh - 90px);
+  width: 100%;
 }
 
 .productCard {

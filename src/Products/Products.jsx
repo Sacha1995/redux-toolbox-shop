@@ -23,11 +23,19 @@ const Products = () => {
   }, [products, searchStr, select]);
 
   if (!products) {
-    return <p>Loading...</p>;
+    return (
+      <div className="products">
+        <p>Loading...</p>
+      </div>
+    );
   }
 
   if (searchStr !== "" && filtered.length === 0) {
-    return <p>No matches</p>;
+    return (
+      <div className="products">
+        <p>No matches</p>
+      </div>
+    );
   }
 
   return (

@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { formEvent } from "../Redux-toolbox/shopSlice";
 import FormElements from "../Reusable code/FormElements";
 
@@ -7,14 +8,16 @@ const Search = () => {
 
   return (
     <div className="search">
-      <FormElements
-        type="text"
-        id="searchStr"
-        callback={(e) => {
-          dispatch(formEvent({ id: e.target.id, value: e.target.value }));
-        }}
-        placeholder="Search products"
-      />
+      <Link to="/">
+        <FormElements
+          type="text"
+          id="searchStr"
+          callback={(e) => {
+            dispatch(formEvent({ id: e.target.id, value: e.target.value }));
+          }}
+          placeholder="Search products"
+        />
+      </Link>
     </div>
   );
 };
