@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { formEvent } from "../Redux-toolbox/shopSlice";
+import { formEvent } from "../Redux-toolbox/filterSlice";
 import FormElements from "../Reusable code/FormElements";
 
 const Search = () => {

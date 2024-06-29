@@ -16,7 +16,14 @@ const ShoppingCartContent = () => {
   let shoppingCart = getShoppingCart(products);
 
   if (shoppingCart.length === 0) {
-    return <p className="emptyMessage">Your shopping card is empty.</p>;
+    return (
+      <div className="containerEmptyMessage">
+        <div className="emptyMessage">
+          <Link to="/">Back to shopping</Link>
+          <p>Your shopping card is empty.</p>
+        </div>
+      </div>
+    );
   }
 
   return (

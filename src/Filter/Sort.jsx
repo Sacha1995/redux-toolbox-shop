@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { formEvent } from "../Redux-toolbox/shopSlice";
+import { formEvent } from "../Redux-toolbox/filterSlice";
 import FormElements from "../Reusable code/FormElements";
 
 const Sort = () => {

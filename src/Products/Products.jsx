@@ -1,12 +1,8 @@
 import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSortedandFiltered } from "../Controllers/getSortedandFiltered.js";
-import {
-  selectProducts,
-  selectSearchStr,
-  selectSelect,
-  toggleDescription,
-} from "../Redux-toolbox/shopSlice";
+import { selectSearchStr, selectSelect } from "../Redux-toolbox/filterSlice.js";
+import { selectProducts, toggleDescription } from "../Redux-toolbox/shopSlice";
 import Controls from "./Controls";
 
 const Products = () => {

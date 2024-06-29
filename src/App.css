@@ -90,11 +90,20 @@ option {
 
 .emptyMessage {
   background-color: white;
-  width: 200px;
+  max-width: 440px;
   padding: 20px;
   border: #76aea3 2px solid;
-  margin: 0px auto;
+  margin: 0px 20px;
   border-radius: 10px;
+}
+
+.emptyMessage p {
+  text-align: center;
+}
+
+.containerEmptyMessage {
+  padding-top: 100px;
+  min-height: calc(100vh - 100px);
 }
 
 .shoppingCartItem {
@@ -285,7 +294,8 @@ h2 {
 
 /********* Media Query *********/
 @media (min-width: 294px) {
-  .shoppingCartContentContainer {
+  .shoppingCartContentContainer,
+  .containerEmptyMessage {
     padding-top: 110px;
     min-height: calc(100vh - 110px);
   }
@@ -310,9 +320,14 @@ h2 {
 }
 
 @media (min-width: 500px) {
-  .shoppingCartContentContainer {
+  .shoppingCartContentContainer,
+  .containerEmptyMessage {
     padding-top: 80px;
     min-height: calc(100vh - 80px);
+  }
+
+  .emptyMessage {
+    margin: 5px auto;
   }
 
   .products {

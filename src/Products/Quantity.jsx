@@ -1,10 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getQuantity } from "../Controllers";
-import {
-  decrement,
-  increment,
-  selectProducts,
-} from "../Redux-toolbox/shopSlice";
+import { adjustQuantity, selectProducts } from "../Redux-toolbox/shopSlice";
 
 const Quantity = ({ id }) => {
   const products = useSelector(selectProducts);
@@ -18,7 +14,7 @@ const Quantity = ({ id }) => {
         alt="minus button"
         className="minus controlsQuantity"
         onClick={() => {
-          dispatch(decrement(id));
+          dispatch(adjustQuantity({ id: id, type: "decrement" }));
         }}
       />
       <p>{quantity}</p>
@@ -27,7 +23,7 @@ const Quantity = ({ id }) => {
         alt="add button"
         className="plus controlsQuantity"
         onClick={() => {
-          dispatch(increment(id));
+          dispatch(adjustQuantity({ id: id, type: "increment" }));
         }}
       />
     </div>
