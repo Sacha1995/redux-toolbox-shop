@@ -1,4 +1,4 @@
-![Assignments](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/c7e9f168-cb2f-4983-b55a-ed7a44f971d3)
+![Assignments - Copy](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/ec3abe22-9a2b-4f27-9162-e68669c61db0)
 # Shopping example
 
 
