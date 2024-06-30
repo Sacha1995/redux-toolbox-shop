@@ -1,7 +1,8 @@
 ![Assignments - Copy](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/ec3abe22-9a2b-4f27-9162-e68669c61db0)
-
+[Disney Classics Game]( https://github.com/Sacha1995/disney) | [Form with validator](https://github.com/Sacha1995/form-validator) | [Simpsons Quotes]( https://github.com/Sacha1995/simpsons) | [Weather Website]( https://github.com/Sacha1995/Weather-Website) | [Traffic Light]( https://github.com/Sacha1995/traffic-light) | [Homage Piece]( https://github.com/Sacha1995/thirdspacelearning)
 
 # Shopping example
+[Website](https://reduxtoolkitshop.netlify.app/)
 
 
 This project showcases me using the redux toolbox and is a fake website where you can purchase items of clothing and add / remove items from a cart. As part of this work I'm using the following tech: The fake store API, React, Hooks, HTML/CSS and some plugins.
