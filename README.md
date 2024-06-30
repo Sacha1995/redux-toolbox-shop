@@ -1,6 +1,6 @@
 # Shopping example
 
-This project showcases me using the redux toolbox and is a fake website where you can purchase items of clothing and add / remove items from a cart. As part of this work I'm using the following tech: The fake store API, React, Hook, HTML/CSS and some plugins.
+This project showcases me using the redux toolbox and is a fake website where you can purchase items of clothing and add / remove items from a cart. As part of this work I'm using the following tech: The fake store API, React, Hooks, HTML/CSS and some plugins.
 
 ![image](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/1a820696-5169-4fe6-9f95-b549aeca14a1)
 ![image](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/333bf04b-f2f6-478e-88ff-5ee345851579)
