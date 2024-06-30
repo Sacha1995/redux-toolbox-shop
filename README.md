@@ -1,5 +1,5 @@
 ![Assignments - Copy](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/ec3abe22-9a2b-4f27-9162-e68669c61db0)
-[google](www.google.com)
+
 
 # Shopping example
 
