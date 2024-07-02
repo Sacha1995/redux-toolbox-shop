@@ -1,6 +1,18 @@
-# Getting Started with Create React App and Redux
+![Assignments - Copy](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/ec3abe22-9a2b-4f27-9162-e68669c61db0)
+[Disney Classics Game]( https://github.com/Sacha1995/disney) | [Form with validator](https://github.com/Sacha1995/form-validator) | [Simpsons Quotes]( https://github.com/Sacha1995/simpsons) | [Weather Website]( https://github.com/Sacha1995/Weather-Website) | [Traffic Light]( https://github.com/Sacha1995/traffic-light) | [Homage Piece]( https://github.com/Sacha1995/thirdspacelearning)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Shopping example
+[Website](https://reduxtoolkitshop.netlify.app/)
+
+
+This project showcases me using the redux toolbox and is a fake website where you can purchase items of clothing and add / remove items from a cart. As part of this work I'm using the following tech: The fake store API, React, Hooks, HTML/CSS and some plugins.
+
+![image](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/1a820696-5169-4fe6-9f95-b549aeca14a1)
+![image](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/333bf04b-f2f6-478e-88ff-5ee345851579)
+![image](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/17ecf36b-64ce-4b2e-a5e2-f309ee7b3c38)
+![image](https://github.com/Sacha1995/redux-toolbox-shop/assets/169173663/59f98653-7cf6-4797-9bb5-e084df53f6dd)
+
+
 
 ## Available Scripts
 
