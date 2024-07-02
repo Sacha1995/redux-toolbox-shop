@@ -29,15 +29,9 @@ export const shopSlice = createSlice({
       const { id, type } = payload;
       const indexProduct = getIndex(state.products, id);
       if (indexProduct !== -1) {
-        if (type === "increment") {
-          state.products[indexProduct].quantity =
-            state.products[indexProduct].quantity + 1;
-        } else if (type === "decrement") {
-          state.products[indexProduct].quantity =
-            state.products[indexProduct].quantity - 1;
-          if (state.products[indexProduct].quantity === 0) {
-            state.products[indexProduct].inCart = false;
-          }
+        state.products[indexProduct].quantity += type === "increment" ? 1 : -1;
+        if (state.products[indexProduct].quantity === 0) {
+          state.products[indexProduct].inCart = false;
         }
       }
       setLocalStorage("data", state.products);
